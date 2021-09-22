@@ -16,5 +16,9 @@
     box-sizing: border-box;
 }
 body {
-
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+    font-family: "Lato" , sense-serif;
+    background-color: var(--bodyColor);
+    position: relative;
 }
