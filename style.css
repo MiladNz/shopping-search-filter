@@ -37,3 +37,11 @@ body {
     z-index: 10;
     padding-bottom: 1rem;
 }
+#search {
+    width: 20rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
