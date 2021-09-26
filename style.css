@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     z-index: 10;
     padding-bottom: 1rem;
 }
@@ -44,4 +44,26 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     font-weight: bold;
+}
+#search:focus {
+    border: 2px solid var(--primaryColor);
+}
+
+.filter-box {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.filter-box a {
+    display: block;
+    text-decoration: none;
+    color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.filter-box a:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
 }
