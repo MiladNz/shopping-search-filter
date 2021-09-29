@@ -6,6 +6,7 @@ let allProductsdata = [];
 const filters = {
     searchItems: "",
 };
+
 document.addEventListener("DOMContentLoaded" , ()=>{
     //console.log("loaded... ");
     axios
@@ -53,7 +54,8 @@ searchInput.addEventListener("input" ,(e)=>{
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
         const filter = e.target.dataset.filter;
-        console.log(filter);
+        //console.log(filter);
         filters.searchItems = filter;
+        renderProducts(allProductsdata,filters);
     });
 });
