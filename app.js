@@ -1,6 +1,7 @@
 //http://localhost:3000/items
 const searchInput = document.querySelector("#search");
 const productsDOM = document.querySelector(".products-center");
+const btns = document.querySelectorAll(".btn");
 let allProductsdata = [];
 const filters = {
     searchItems: "",
@@ -22,7 +23,7 @@ function renderProducts(_products,_filters){
         return p.title.toLowerCase().includes(_filters.searchItems.toLowerCase());
     });
     productsDOM.innerHTML = "";
-    console.log(filteredProducts);
+    //console.log(filteredProducts);
     //render to DOM
     filteredProducts.forEach((item,index) => {
         //create
@@ -43,7 +44,16 @@ function renderProducts(_products,_filters){
 }
 
 searchInput.addEventListener("input" ,(e)=>{
-    console.log(e.target.value);
+    //console.log(e.target.value);
     filters.searchItems = e.target.value;
     renderProducts(allProductsdata,filters);
+});
+
+// filter based groups:
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+        const filter = e.target.dataset.filter;
+        console.log(filter);
+        filters.searchItems = filter;
+    });
 });
