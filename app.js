@@ -21,6 +21,7 @@ function renderProducts(_products,_filters){
     const filteredProducts = _products.filter( p => {
         return p.title.toLowerCase().includes(_filters.searchItems.toLowerCase());
     });
+    productsDOM.innerHTML = "";
     console.log(filteredProducts);
     //render to DOM
     filteredProducts.forEach((item,index) => {
